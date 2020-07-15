@@ -5,3 +5,11 @@ padding: 0px;
 min-width: 1000px;
 background: url('../images/bg_body.png') repeat-x center top #DEF2F7;
 }
+
+h1
+{
+font-family: Arial;
+font-size: 18px;
+color: #1880eb;
+margin-bottom: 10px;
+}
