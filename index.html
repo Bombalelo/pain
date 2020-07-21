@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- © 34web Studio | http://www.34web.ru/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<base href="http://xn--105-8cdalj1bzaip3b3k.xn--p1ai/" />
+<title>Главная | Мальвина, Детский сад №105. Волжский</title>
+<meta name="keywords" content="Детский сад 105, Мальвина, Волжский"/>
+<meta name="description" content="Детский сад 105, Мальвина, Волжский"/>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<link href="assets/templates/malvina/css/main.css?v=1.08" type="text/css" rel="stylesheet"/>
+<link href="/assets/plugins/simplegallery/css/file-icons.css?v=1.01" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="assets/templates/malvina/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/templates/malvina/js/jcarousel/jquery.jcarousel.js"></script>
+<link href="assets/templates/malvina/js/jcarousel/carousel.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+    jQuery(document).ready(function () { jQuery('#razdelactionscarousel').jcarousel({ visible: 1, scroll: 1, auto: 3, wrap: 'last', initCallback: mycarousel_initCallback, itemVisibleInCallback: { onAfterAnimation: function (c, o, i, s) { i = (i - 1) % jQuery('#razdelactionscarousel li').size(); jQuery('.jcarousel-control a').removeClass('active'); jQuery('.jcarousel-control a:eq(' + i + ')').addClass('active'); } } }); });
+
+    function mycarousel_initCallback(carousel) {
+        jQuery('.jcarousel-control a').bind('click', function () {
+            carousel.scroll(jQuery.jcarousel.intval(jQuery(this).attr('rel')));
+            return false;
+        });        
+        carousel.clip.hover(function () { carousel.stopAuto(); }, function () { carousel.startAuto(); });
+    };
+
+    </script>
+<script type="text/javascript" src="assets/templates/malvina/js/fancybox/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/templates/malvina/js/fancybox/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="assets/templates/malvina/js/fancybox/helpers/jquery.fancybox-thumbs.css" />
+<script type="text/javascript" src="assets/templates/malvina/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery(".fancy-intext").fancybox({
+	openEffect  : 'none',
+	closeEffect	: 'none',
+	helpers : {
+	    title : {
+    		type : 'inside'
+		    },
+	    thumbs : {
+		width  : 50,
+		height : 50
+		     }
+		}
+    });
+
+});
+
+
+</script>
+<script type="text/javascript">
+function setCookie(name, value, expires, path, domain, secure) {
+    document.cookie = name + "=" + escape(value) +
+      ((expires) ? "; expires=" + expires : "") +
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      ((secure) ? "; secure" : "");
+  }
+
+// возвращает cookie с именем name, если есть, если нет, то undefined
+function getCookie(name) {
+  var cookie = " " + document.cookie;
+  var search = " " + name + "=";
+  var setStr = null;
+  var offset = 0;
+  var end = 0;
+  if (cookie.length > 0) {
+    offset = cookie.indexOf(search);
+    if (offset != -1) {
+      offset += search.length;
+      end = cookie.indexOf(";", offset)
+      if (end == -1) {
+        end = cookie.length;
+      }
+      setStr = unescape(cookie.substring(offset, end));
+    }
+  }
+  return(setStr);
+}
+
+function deleteCookie(name) {
+  setCookie(name, "", {
+    expires: -1
+  })
+}
+
+function version_click() {
+setCookie("version", "1",'','\/');
+setCookie("color", "white",'','\/');
+setCookie("size", "optimal",'','\/');
+setCookie("img", "show",'','\/');
+jQuery("body").addClass("version");
+jQuery("body").addClass("color01");
+jQuery("body").addClass("text_optimal");
+}
+
+function version_off() {
+deleteCookie("version");
+deleteCookie("color");
+deleteCookie("size");
+deleteCookie("img");
+jQuery("body").removeClass();
+}
+
+function cl01() {
+setCookie("color", "white",'','\/');
+jQuery("body").removeClass("color02");
+jQuery("body").removeClass("color03");
+jQuery("body").addClass("color01");
+}
+
+function cl02() {
+setCookie("color", "black",'','\/');
+jQuery("body").removeClass("color01");
+jQuery("body").removeClass("color03");
+jQuery("body").addClass("color02");
+}
+
+function cl03() {
+setCookie("color", "blue",'','\/');
+jQuery("body").removeClass("color02");
+jQuery("body").removeClass("color01");
+jQuery("body").addClass("color03");
+}
+
+function sizeSmall() {
+setCookie("size", "small",'','\/');
+jQuery("body").removeClass("text_optimal");
+jQuery("body").removeClass("text_big");
+jQuery("body").addClass("text_small");
+jQuery(".resetFont").removeClass("current");
+jQuery(".increaseFont").removeClass("current");
+jQuery(".decreaseFont").addClass("current");
+}
+
+function sizeOptimal() {
+setCookie("size", "optimal",'','\/');
+jQuery("body").removeClass("text_small");
+jQuery("body").removeClass("text_big");
+jQuery("body").addClass("text_optimal");
+jQuery(".decreaseFont").removeClass("current");
+jQuery(".increaseFont").removeClass("current");
+jQuery(".resetFont").addClass("current");
+}
+
+function sizeBig() {
+setCookie("size", "big",'','\/');
+jQuery("body").removeClass("text_small");
+jQuery("body").removeClass("text_optimal");
+jQuery("body").addClass("text_big");
+jQuery(".resetFont").removeClass("current");
+jQuery(".decreaseFont").removeClass("current");
+jQuery(".increaseFont").addClass("current");
+}
+
+function showImg() {
+switch (getCookie("img")) {
+  case "show":
+	setCookie("img", "noshow",'','\/');
+	jQuery("body").addClass("noshow");
+	jQuery("#show-image").removeClass();
+	jQuery("#show-image").addClass("si-check");
+break;
+  case "noshow":
+	setCookie("img", "show",'','\/');
+	jQuery("body").removeClass("noshow");
+	jQuery("#show-image").removeClass();
+	jQuery("#show-image").addClass("si-check-act");
+break;
+}
+}
+
+jQuery(document).ready(function() {
+//alert(getCookie("version"));
+if(getCookie("version")=="1") {
+jQuery("body").addClass("version");
+}
+
+if(getCookie("color")=="white") {
+jQuery("body").addClass("color01");
+}
+
+if(getCookie("color")=="black") {
+jQuery("body").addClass("color02");
+}
+
+if(getCookie("color")=="blue") {
+jQuery("body").addClass("color03");
+}
+
+if(getCookie("size")=="optimal") {
+jQuery("body").addClass("text_optimal");
+jQuery(".decreaseFont").removeClass("current");
+jQuery(".increaseFont").removeClass("current");
+jQuery(".resetFont").addClass("current");
+}
+
+if(getCookie("size")=="small") {
+jQuery("body").addClass("text_small");
+jQuery(".resetFont").removeClass("current");
+jQuery(".increaseFont").removeClass("current");
+jQuery(".decreaseFont").addClass("current");
+}
+
+if(getCookie("size")=="big") {
+jQuery("body").addClass("text_big");
+jQuery(".resetFont").removeClass("current");
+jQuery(".decreaseFont").removeClass("current");
+jQuery(".increaseFont").addClass("current");
+}
+
+if(getCookie("img")=="noshow") {
+jQuery("body").addClass("noshow");
+jQuery("#show-image").removeClass();
+jQuery("#show-image").addClass("si-check");
+}
+
+if(getCookie("img")=="show") {
+jQuery("body").removeClass("noshow");
+jQuery("#show-image").removeClass();
+jQuery("#show-image").addClass("si-check-act");
+}
+    });
+</script>
+</head>
+<body>
+<div class="top-box clearfix">
+	<div class="tools">
+		<div class="original-site"><a onclick="version_off()">Обычная версия сайта</a></div>		
+		<div class="size-box clearfix">
+			<span>Размер шрифта:</span>
+			<a class="decreaseFont" onclick="sizeSmall()">A</a>
+			<a class="resetFont current" onclick="sizeOptimal()">A</a> 
+			<a class="increaseFont" onclick="sizeBig()">A</a>
+		</div>
+		
+		<div class="color-box">
+			<span>Цветовая схема:</span>
+			<a class="cl01" onclick="cl01()"><img src="/assets/templates/malvina/images/a1.png" width="20" height="20" alt="#"></a>
+			<a class="cl02" onclick="cl02()"><img src="/assets/templates/malvina/images/a2.png" width="20" height="20" alt="#"></a>
+			<a class="cl03" onclick="cl03()"><img src="/assets/templates/malvina/images/a3.png" width="20" height="20" alt="#"></a>
+		</div>
+		<div class="img-box">
+                  <a onClick="showImg();" id="show-image" class="si-check-act">
+                     <div id="si-check"></div>
+                     <div>Показывать изображения</div>
+                  </a>
+		</div>
+	</div>
+</div>
+<div class="name_polyanka">
+	<a href="/">МДОУ д/с № 105</a>
+</div>
+<div id="top_outer"> 
+	<div id="top">
+		<div id="top_content">
+			<a id="version" onclick="version_click()">Версия для слабовидящих</a>
+			<a href="/" title="На главную"><div id="top_img_left"></div></a>
+			<div id="top_dsname">МДОУ д/с № 105</div>
+			<div id="top_menu_out">
+				<div id="top_menu"><a class="menu_button_0" href="/o-nas" title="О нас">О нас</a>
+<a class="menu_button_1" href="/novosti" title="Новости">Новости</a>
+<a class="menu_button_2" href="/roditelyam" title="Родителям">Родителям</a>
+<a class="menu_button_2" href="/kontaktyi" title="Контакты">Контакты</a>
+<a class="menu_button_17" href="/svedeniya-ob-obrazovatelnoj-organizaczii2" title="Сведения об образовательной организации">Сведения об образовательной организации</a>
+<a class="menu_button_5" href="/users" title="Личный кабинет">Личный кабинет</a>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="submid">
+
+<div id="mid">  
+	<div id="mid_left">  
+		<div id="slider_out">
+	<div id="slider_lb"></div>
+	<div id="slider_rt"></div>
+	
+	<ul id="razdelactionscarousel" class="jcarousel-skin-razdelactions">		
+	
+<li ><img src="assets/images/slider/baner.jpg" alt=""/></li>
+<li ><img src="assets/images/slider/D0eW39WXgAIVPh8.jpg" alt=""/></li>
+<li ><img src="assets/images/slider/8d4de9213c0.jpg" alt=""/></li>
+<li ><img src="assets/images/slider/banner.jpg" alt=""/></li>
+		
+	</ul> 
+</div>
+		<div id="content_out">
+			<div id="content"><p style="text-align: center;"><span style="color: #e21dca;"><strong><span style="font-size: 100%;">муниципальное дошкольное образовательное учреждение </span></strong></span></p>
+<p style="text-align: center;"><span style="color: #e21dca;"><strong><span style="font-size: 100%;">"Детский сад &nbsp;№ 105 "Мальвина"&nbsp;</span></strong></span><span style="color: #e21dca;"><strong><span style="font-size: 100%;">г. Волжского Волгоградской области"</span></strong></span></p>
+<p style="text-align: center;"><img src="assets/images/glavnaya/img1.jpg" alt="" width="667" height="500" /></p>
+<p style="text-align: center;"><span style="color: #0000ff;"><strong>Детский сад - участник международного проекта </strong></span></p>
+<p style="text-align: center;"><span style="color: #0000ff;"><strong>по проблеме &laquo;Социально-эмоциональное развитие ребенка в дошкольном периоде&raquo;.</strong></span></p>
+<p><strong>Цель коллектива:</strong> внедрение современных форм и методов образования, направленных на формирование самостоятельной, творческой личности ребёнка дошкольника.</p>
+<p>Мы обеспечиваем воспитание и обучение детей в соответствии с государственными стандартами дошкольного образования с приоритетным осуществлением задач:</p>
+<ul>
+<li>познавательного развития</li>
+<li>речевого развития</li>
+<li>социально-коммуникативного развития</li>
+<li>художественно-эстетического развития</li>
+<li>физического развития</li>
+</ul>
+<p><strong> С детьми работают квалифицированные специалисты:</strong></p>
+<ul>
+<li><strong>воспитатели </strong>с детьми рисуют, лепят, читают и играют, учат думать и наблюдать;</li>
+<li><strong>музыкальные руководители</strong> поют и танцуют, играют с детьми в оркестре и театре, постигая законы красоты;</li>
+<li><strong>инструктор по физической культуре</strong> обеспечивает гармоничное физическое развитие через понимание ценности здорового образа жизни;</li>
+<li><strong>педагог-психолог </strong>развивает внимание и мышление, помогает детям с проблемами в развитии.</li>
+</ul>
+<p>&nbsp;</p>
+<p class="subtitle" style="text-align: center;"><strong><span style="color: #0000ff;">Мы помогаем каждому ребенку поверить в свои силы, понять свои чувства</span></strong></p>
+<p class="subtitle" style="text-align: center;"><strong><span style="color: #0000ff;">и чувства других,&nbsp;развивать социальные навыки общения и поведения в обществе.</span></strong></p>
+<p class="subtitle" style="text-align: center;">&nbsp;</p>
+<p class="subtitle justifyleft"></p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft">&nbsp;</p>
+<p class="subtitle justifyleft"><span style="white-space: pre;">&nbsp;</span></p></div>
+		</div>
+	</div>
+	<div id="mid_right">
+		<div class="right_content_out">
+	<div class="right_content_news">
+		<div class="right_header"><p>Новости</p></div>
+		<a class="menu" href="novosti/den-zashhitnika-otechestva">Наши новости</a><a class="menu" href="novosti/novosti-rossii-i-volgogradskoj-oblasti">Новости России и Волгоградской области</a><a class="menu" href="novosti/prazdnovanie-75-letiya-pobedy-v-velikoj-otechestvennoj-vojne">Празднование 75-летия Победы в Великой Отечественной войне</a> 
+	</div>
+</div>
+		<div class="right_content_out" style="z-index: +1;">
+	<div class="malvina"></div>
+	<div class="right_content_news">
+		<div class="right_header"><p>Ссылки</p></div>
+<a class="menu" href="http://www.edu.ru" target="_blank">Федеральный портал "Российское образование"</a>
+<a class="menu" href="http://window.edu.ru" target="_blank">Информационная система "Единое окно доступа к образовательным ресурсам"</a>
+<a class="menu" href="http://school-collection.edu.ru" target="_blank">Единая коллекция цифровых образовательных ресурсов</a>
+<a class="menu" href="http://fcior.edu.ru" target="_blank">Федеральный центр информационно-образовательных ресурсов</a>
+<a class="menu" href="https://edu.gov.ru" target="_blank">Министерство просвещения Российской Федерации</a>
+<a class="menu" href="https://minobrnauki.gov.ru" target="_blank">Министерство науки и высшего образования Российской Федерации</a>
+	</div>
+</div>
+<div class="banner" style="z-index: +1;">
+        <a href="http://pravo.gov.ru"><img src="http://pravo.gov.ru/export/sites/default/galleries/gspi_banners/6.png" border="0" alt="Официальный интернет-портал правовой информации"></a></div>
+<div class="banner" style="z-index: +1;">
+	<a href="http://8443.org/Obrazovanie/Doshkolnie-uchrezhdeniya/12-113-0.html" target="_blank"><img src="./assets/images/bannery/catalog.jpg"></a>
+</div>
+	</div>
+</div>
+</div>
+<div id="footer">
+	<div id="footer_content"> 
+		<div id="footer_left">
+			МДОУ д/с 105 &laquo;Мальвина&raquo;<br/>
+			&copy; Все права защищены<br/>
+			<a href="http://34web.ru/" class="dev-34web" title="Разработка веб сайтов в Волгограде в Волжском" target="_blank">Разработка сайта &mdash; &laquo;34web&raquo;</a>
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=46760568&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/46760568/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="46760568" data-lang="ru" /></a> <!-- /Yandex.Metrika informer -->
+		</div>
+		<div id="footer_menu"><div ><a href="/o-nas" title="О нас">О нас</a></div>
+<div ><a href="/novosti" title="Новости">Новости</a></div>
+<div ><a href="/roditelyam" title="Родителям">Родителям</a></div>
+<div ><a href="/kontaktyi" title="Контакты">Контакты</a></div>
+<div ><a href="/svedeniya-ob-obrazovatelnoj-organizaczii2" title="Сведения об образовательной организации">Сведения об образовательной организации</a></div>
+<div  class="last"><a href="/users" title="Личный кабинет">Личный кабинет</a></div>
+</div>
+	</div>
+	<div id="footer_right"></div>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46760568 = new Ya.Metrika({ id:46760568, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46760568" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</div>
+</body>
+</html>
