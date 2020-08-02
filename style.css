@@ -3,7 +3,7 @@ body
 margin: 0px;
 padding: 0px;
 min-width: 1000px;
-background: url('D:\my\pain\images\bg_body.png') repeat-x center top #DEF2F7;
+background: url('images/bg_body.png') repeat-x center top #DEF2F7;
 }
 
 #top
@@ -12,5 +12,22 @@ position: relative;
 height: 300px;
 width: 100%;
 min-width: 1000px;
-background: url('D:\my\pain\images\bg_head.jpg') 50% 0% no-repeat;
+background: url('images/bg_head.jpg') 50% 0% no-repeat;
+}
+
+#top_content
+{
+position: relative;
+width: 1000px; 
+margin: 0px auto;
+}
+
+#top_img_left
+{
+height: 83px;
+left: 18px;
+position: absolute;
+top: 70px;
+width: 346px;
+background: url('images/top_logo.png') 50% 50% no-repeat;
 }
